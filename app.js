@@ -11,7 +11,7 @@ const getWeather = async () => {
 
     let data  = await promisifiedRequest({
         uri: `https://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=${process.env.APPID}`,
-        json: true
+        json: true // Automatically stringifies the body to JSON
     })
 
     // Get ALL weather data
