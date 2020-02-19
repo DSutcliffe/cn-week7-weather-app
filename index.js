@@ -3,7 +3,6 @@ const request = require('request');
 
 require('dotenv').config() // https://www.npmjs.com/package.dotenv
 
-
 const getWeather = () => {
     request({
        uri: `https://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=${process.env.APPID}`,
@@ -11,7 +10,7 @@ const getWeather = () => {
     }, (err, res) => {
         if (err) throw err;
         console.log(res.body);
-        
+
     })
 }
 
